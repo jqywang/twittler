@@ -14,17 +14,21 @@
 
         var index = streams.home.length - 1;
         var i = 0;
-        var printTweets = function (index, i){
-          while(i  <= index){
-            var tweet = streams.home[index-i];
+        var printLatestTweets = function (total, current){
+          while(current  <= total){
+            var tweet = streams.home[current];
             var $tweet = $('<div></div>');
             $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
-            $tweet.appendTo($body);
-            i++;
+            $tweet.addClass('#tweet');
+            $tweet.prependTo($body);
+            current++;
             }
         }
-        printTweets(index, i);
-        $('button').on('click', function(){
+        printLatestTweets(index, i);
+        $('button').on('click', function(){ 
+          var index = streams.home.length - 1;
+          var i =$("body").find('div').size();
+          printLatestTweets(index, i);
         });
       });
 
