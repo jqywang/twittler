@@ -17,9 +17,11 @@
         var printLatestTweets = function (total, current){
           while(current  <= total){
             var tweet = streams.home[current];
-            var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
-            $tweet.addClass('#tweet');
+            var $tweet = $('<div class="tweet">' +
+            '<span class="user">' + tweet.user + '@ ' + '</span>' + tweet.message + " " +
+            tweet.created_at + '</div>');
+            //$tweet.text('<span class="user">' + '@' + tweet.user + "</span>" + ': ' + tweet.message + " " + tweet.created_at);
+            //$tweet.addClass('#tweet');
             $tweet.prependTo($body);
             current++;
             }
