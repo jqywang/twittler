@@ -3,35 +3,42 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
-    <h1> hell yea <h1>
-    <button type="button">Click Me!</button>
+
   </head>
   <body>
+    <div class="top">
+        <button type="button">New Tweets!</button>
+        <h1>twittler</h1>
+    </div>
+
+    <div class = 'main'>
+    </div>
     <script>
       $(document).ready(function(){
-        var $body = $('body');
+        var $main = $('.main');
         //$body.html('');
 
         var index = streams.home.length - 1;
         var i = 0;
         var printLatestTweets = function (total, current){
+
           while(current  <= total){
             var tweet = streams.home[current];
             var $tweet = $('<div class="tweet">' +
-            '<span class="user">' + tweet.user + '@ ' + '</span>' + tweet.message + " " +
-            tweet.created_at + '</div>');
+            '<span class="user">' + tweet.user + '@ ' + '</span>' + tweet.message + " " + '<span class = "time">' +
+            tweet.created_at + '</span>' + '</div>');
             //$tweet.text('<span class="user">' + '@' + tweet.user + "</span>" + ': ' + tweet.message + " " + tweet.created_at);
             //$tweet.addClass('#tweet');
-            $tweet.prependTo($body);
+            $tweet.prependTo($main);
             current++;
             }
         }
         printLatestTweets(index, i);
         $('button').on('click', function(){ 
           var index = streams.home.length - 1;
-          var i =$("body").find('div').size();
+          var i =$(".main").find('div').size();
           printLatestTweets(index, i);
-        });
+        }); 
       });
 
     </script>
