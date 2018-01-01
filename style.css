@@ -12,6 +12,13 @@ body {
 
 .tweet {
     padding: 0.5em 1em 1em;
-    margin: 0.5em 0;
+    margin: 1.5em 0.5em 0.5em 0em;
     background-color: #ececef;
+}
+button {
+	background-color: yellow;
+}
+.border {
+	border-width: 0em;
+	border-radius: 1.5em;
 }
