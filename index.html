@@ -8,7 +8,7 @@
   <body>
     <span class="top">
         <h1>twittler</h1>
-        <p><button type="button">New Tweets!</button></p>
+        <p><button type="button" class = "border">New Tweets!</button></p>
     </span>
 
     <div class = 'main'>
@@ -22,8 +22,8 @@
 
           while(current  <= total){
             var tweet = streams.home[current];
-            var $tweet = $('<div class="tweet">' +
-            '<span class="user">' + tweet.user + '@ ' + '</span>' + tweet.created_at + " " + '<span class = "time"><p>' +
+            var $tweet = $('<div class="tweet border">' +
+            '<span class="user">' + '@' + tweet.user + '</span>' + " " + tweet.created_at + " " + '<span class = "time"><p>' +
             tweet.message + '</span></p>' + '</div>');
             //$tweet.text('<span class="user">' + '@' + tweet.user + "</span>" + ': ' + tweet.message + " " + tweet.created_at);
             //$tweet.addClass('#tweet');
@@ -43,7 +43,6 @@
           var index = streams.home.length -1;
           printLatestTweets(index, i);
         });
-        
       });
 
     </script>
