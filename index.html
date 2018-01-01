@@ -3,7 +3,7 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
-
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <span class="top">
@@ -16,8 +16,6 @@
     <script>
       $(document).ready(function(){
         var $main = $('.main');
-        //$body.html('');
-
         var index = streams.home.length - 1;
         var i = 0;
         var printLatestTweets = function (total, current){
