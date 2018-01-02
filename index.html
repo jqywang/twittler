@@ -21,7 +21,7 @@
         var printLatestTweets = function (total, current){
           while(current  <= total){
             var tweet = streams.home[current];
-            var $tweet = $('<div class="tweet border">' +
+            var $tweet = $('<div class="borderedTweet">' +
             '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + " " + tweet.created_at + " " + '<span class = "time"><p>' +
             tweet.message + '</span></p>' + '</div>');
             //$tweet.text('<span class="user">' + '@' + tweet.user + "</span>" + ': ' + tweet.message + " " + tweet.created_at);
@@ -32,18 +32,22 @@
         }
         printLatestTweets(index, i);
         $('button').on('click', function(){ 
+          $('div.borderedTweet').each(function(){
+            $(this).show();
+          });
           var index = streams.home.length - 1;
           var i =$(".main").find('div').size();
           printLatestTweets(index, i);
-        }); 
-        $('h1').off("click").click(function() {
-          $main.html('');
-          var i = 0;
-          var index = streams.home.length -1;
-          printLatestTweets(index, i);
-        });
-        $('.user').on('click', function(){
-          console.log('hey there');
+        });   
+        $main.on("click", "span.user",function(){
+          var thisUser = $(this).data('user');
+          console.log(thisUser);
+          $('div.borderedTweet').each(function(){
+            var $thisTweet = $(this).find('span');
+            if($thisTweet.data('user') !== thisUser){
+              $(this).hide();
+            }
+          });
         });
 
 
