@@ -7,8 +7,7 @@ h1{
 	color:white;
 	float: left;
 	width: 100%;
-    padding: 0.1em;
-    margin: 0 0 0 4em;
+    margin: 0.5em 1em 0em 2em;
     height: 1.5em;
     font-size: 4em;
 }
@@ -26,7 +25,6 @@ body {
     max-width: 60em;
 }  
 .borderedTweet {
-	align-content: center;
     padding: 0.5em 1em 1em;
     margin: 1.5em 0.5em 0.5em 0em;
     max-width: 60%;
