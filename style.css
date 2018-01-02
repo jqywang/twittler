@@ -8,16 +8,25 @@ body {
     color: #100;
     padding: 0 0 2em;
     margin: 0; 
+    align-content: center;
 }
-
-.tweet {
+.main{
+	align-content:center ;
+}
+.borderedTweet {
+	align-content: center;
     padding: 0.5em 1em 1em;
     margin: 1.5em 0.5em 0.5em 0em;
+    max-width: 60%;
     background-color: #ececef;
+    border-width: 0em;
+	border-radius: 1.5em;
 }
+
 button {
 	background-color: yellow;
 }
+
 .border {
 	border-width: 0em;
 	border-radius: 1.5em;
