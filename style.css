@@ -43,7 +43,11 @@ button {
 	cursor: pointer;
 	color: blue;
 }
-
+.time {
+	color: grey;
+	font-size: 10px;
+	font-style: italic;
+}
 
 .border {
 	border-width: 0em;
