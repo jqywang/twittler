@@ -19,8 +19,8 @@
           while(current  <= total){
             var tweet = streams.home[current];
             var $tweet = $('<div class="borderedTweet">' +
-            '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + " " + tweet.created_at + " " + '<span class = "time"><p>' +
-            tweet.message + '</span></p>' + '</div>');
+            '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + " <span class = \"time\"> " + tweet.created_at + " </span>" + '<p>' +
+            tweet.message + '</p>' + '</div>');
             //$tweet.text('<span class="user">' + '@' + tweet.user + "</span>" + ': ' + tweet.message + " " + tweet.created_at);
             //$tweet.addClass('#tweet');
             $tweet.prependTo($main);
